@@ -8,4 +8,4 @@ RUN mkdir -p /var/lib/mongodb/data
 
 EXPOSE 27017
 
-CMD '/usr/bin/mongod --dbpath /var/lib/mongodb/data'
+CMD ["/usr/bin/mongod","--dbpath=/var/lib/mongodb/data"]
