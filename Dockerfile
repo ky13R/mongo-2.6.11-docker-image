@@ -1,5 +1,7 @@
 FROM rhel7
 
+MAINTAINER ky13(kritchie@redhat.com)
+
 COPY epel-release-latest-7.noarch.rpm $HOME
 
 RUN rpm -ivh epel-release-latest-7.noarch.rpm && yum install mongodb-server mongodb -y && yum clean all
