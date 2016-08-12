@@ -2,7 +2,11 @@ FROM rhel7
 
 COPY epel-release-latest-7.noarch.rpm $HOME
 
-RUN rpm -ivh epel-release-latest-7.noarch.rpm && yum install mongodb-server mongodb && yum clean all
+RUN rpm -ivh epel-release-latest-7.noarch.rpm && yum install mongodb-server mongodb -y && yum clean all
+
+RUN mkdir -p /var/lib/mongodb/data
+
+ENV DBPATH=/var/lib/mongodb/data
 
 EXPOSE 27017
 
