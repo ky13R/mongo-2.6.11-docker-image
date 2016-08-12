@@ -7,7 +7,7 @@ RUN rpm -ivh epel-release-latest-7.noarch.rpm && yum install mongodb-server mong
 RUN mkdir -p /var/lib/mongodb/data
 
 #Uncomment the following if you plan to allow remote authentication
-# sed -i 's/#auth = true/auth = true/g' /etc/mongodb.conf
+#RUN sed -i 's/#auth = true/auth = true/g' /etc/mongod.conf
 
 EXPOSE 27017
 
